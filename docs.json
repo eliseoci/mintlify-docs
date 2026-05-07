@@ -116,7 +116,7 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
+    "light": "/logo/nexo-logo.png",
     "dark": "/logo/dark.svg"
   },
   "navbar": {
