@@ -1,0 +1,46 @@
+---
+title: Roles y permisos
+description: Cómo controlar el acceso de los usuarios a la plataforma de Nexo.
+---
+
+Nexo tiene un sistema de roles que define qué puede ver y hacer cada usuario dentro de la plataforma.
+
+## Roles disponibles
+
+| Rol | Descripción |
+|---|---|
+| **Administrador** | Acceso completo a todas las funciones: agentes, canales, campañas, clientes, configuración. |
+| **Operador** | Puede gestionar conversaciones, contactos y campañas. No puede crear canales ni modificar configuración. |
+| **Solo lectura** | Puede ver conversaciones y reportes, pero no puede modificar ni enviar mensajes. |
+
+## Agregar un usuario
+
+<Steps>
+  <Step title="Ir a Configuración">
+    Desde el menú lateral, seleccioná **Configuración**.
+  </Step>
+
+  <Step title="Usuarios">
+    Andá a la sección **Usuarios** y hacé clic en **Invitar usuario**.
+  </Step>
+
+  <Step title="Completar los datos">
+    Ingresá el email del usuario y seleccioná el rol que querés asignarle.
+  </Step>
+
+  <Step title="Enviar invitación">
+    El usuario recibe un email con el link para crear su contraseña y acceder a la plataforma.
+  </Step>
+</Steps>
+
+## Acceso por cliente
+
+Los permisos se aplican a nivel de cuenta (cliente). Si un usuario administra múltiples clientes, necesitás asignarle acceso en cada uno por separado.
+
+<Note>
+  Un usuario con rol **Administrador** en un cliente no tiene acceso automático a otros clientes. El acceso es siempre explícito y por cuenta.
+</Note>
+
+## Revocar acceso
+
+Para quitar el acceso de un usuario, andá a **Configuración → Usuarios**, buscá al usuario y hacé clic en **Desactivar**. El usuario pierde el acceso inmediatamente.

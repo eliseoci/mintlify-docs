@@ -1,0 +1,62 @@
+---
+title: Crear una campaña
+description: Enviá mensajes masivos a tu base de contactos desde Nexo.
+---
+
+Una campaña es un envío de mensajes a un grupo de contactos en simultáneo. Usala para comunicados, promociones, recordatorios o cualquier mensaje que necesite llegar a muchas personas a la vez.
+
+## Requisitos
+
+- Tener al menos un canal de **WhatsApp API** conectado y activo.
+- Tener contactos cargados en Nexo.
+
+<Warning>
+  Las campañas masivas por WhatsApp requieren usar **plantillas de mensaje aprobadas por Meta**. No podés enviar cualquier texto libre como primer mensaje a un contacto que no inició conversación en las últimas 24 horas.
+</Warning>
+
+## Cómo crear una campaña
+
+<Steps>
+  <Step title="Ir a Campañas">
+    Desde el menú lateral, seleccioná **Campañas** y luego hacé clic en **Nueva campaña**.
+  </Step>
+
+  <Step title="Configurar los detalles">
+    | Campo | Descripción |
+    |---|---|
+    | **Nombre** | Identificador interno de la campaña |
+    | **Canal** | Canal de WhatsApp API desde donde se envía |
+    | **Plantilla** | Plantilla de Meta previamente aprobada |
+    | **Segmento** | Grupo de contactos que recibirán el mensaje |
+  </Step>
+
+  <Step title="Personalizar el mensaje">
+    Si la plantilla tiene variables (ej: `{{nombre}}`), podés mapear esas variables a campos de tus contactos para personalizar cada mensaje.
+  </Step>
+
+  <Step title="Programar o enviar">
+    - **Enviar ahora**: el envío comienza de inmediato.
+    - **Programar**: elegí fecha y hora para el envío diferido.
+  </Step>
+
+  <Step title="Confirmar">
+    Revisá el resumen: cantidad de contactos, canal y plantilla. Confirmá para iniciar la campaña.
+  </Step>
+</Steps>
+
+## Estado de una campaña
+
+Después de lanzar una campaña, podés ver el estado en tiempo real:
+
+| Estado | Significado |
+|---|---|
+| **Programada** | Esperando la fecha/hora de envío |
+| **En progreso** | Enviando mensajes |
+| **Completada** | Todos los mensajes fueron procesados |
+| **Error** | Hubo problemas en el envío — revisá los detalles |
+
+## Próximo paso
+
+<Card title="Gestionar seguimientos" icon="clock" href="/campanas/seguimientos">
+  Configurá follow-ups automáticos para los contactos que no respondieron.
+</Card>

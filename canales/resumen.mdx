@@ -1,0 +1,38 @@
+---
+title: Canales
+description: Conectá tu agente IA a los canales de comunicación de tu negocio.
+---
+
+Un canal es el medio por el cual tu agente recibe y envía mensajes. Nexo soporta cuatro canales:
+
+<CardGroup cols={2}>
+  <Card title="WhatsApp API" icon="message-circle" href="/canales/whatsapp-api">
+    La opción recomendada para volúmenes altos. Requiere cuenta de Meta Business verificada.
+  </Card>
+  <Card title="WhatsApp Web" icon="smartphone" href="/canales/whatsapp-web">
+    Conexión rápida vía QR. Ideal para pruebas o negocios de bajo volumen.
+  </Card>
+  <Card title="Instagram" icon="instagram" href="/canales/instagram">
+    Respondé DMs y comentarios de Instagram con automatizaciones configurables.
+  </Card>
+  <Card title="Chatwoot" icon="headset" href="/canales/chatwoot">
+    Integrá Nexo con tu instancia de Chatwoot para gestión centralizada.
+  </Card>
+</CardGroup>
+
+## ¿Qué canal usar?
+
+| Necesidad | Canal recomendado |
+|---|---|
+| Alto volumen de mensajes | WhatsApp API |
+| Prueba rápida sin configuración Meta | WhatsApp Web |
+| Respuestas automáticas en Instagram | Instagram |
+| Mesa de ayuda existente | Chatwoot |
+
+<Warning>
+  Cada canal requiere configuración previa. Antes de activar WhatsApp API o Instagram, necesitás completar los pasos en Meta Business Manager. Consultá la sección de [Integraciones](/integraciones/meta-informacion-negocio).
+</Warning>
+
+## Un agente, múltiples canales
+
+Podés asignar el mismo agente a más de un canal. El agente mantiene el contexto de cada conversación por separado — una conversación de WhatsApp y una de Instagram del mismo contacto son hilos independientes.

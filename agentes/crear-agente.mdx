@@ -1,0 +1,50 @@
+---
+title: Crear un agente
+description: Cómo crear y configurar un nuevo agente IA en Nexo.
+---
+
+Un agente es la IA que responde a tus clientes. Antes de conectar cualquier canal, necesitás tener al menos un agente creado y configurado.
+
+## Paso a paso
+
+<Steps>
+  <Step title="Ir a Agentes">
+    Desde el menú lateral, seleccioná **Agentes**.
+  </Step>
+
+  <Step title="Crear nuevo agente">
+    Hacé clic en el botón **Nuevo agente** (o en el ícono `+` según la vista).
+  </Step>
+
+  <Step title="Completar los datos básicos">
+    | Campo | Descripción |
+    |---|---|
+    | **Nombre** | Identificador interno. Solo vos lo ves. Ej: "Agente Ventas MX" |
+    | **Prompt** | Instrucciones que definen el comportamiento del agente |
+
+    <Warning>
+      El campo **Prompt** es el más importante. Un agente sin prompt claro responde de forma genérica e inconsistente.
+    </Warning>
+  </Step>
+
+  <Step title="Guardar">
+    Hacé clic en **Guardar**. El agente queda creado y disponible para asignar a canales.
+  </Step>
+</Steps>
+
+## ¿Qué sigue después de crear el agente?
+
+<CardGroup cols={2}>
+  <Card title="Configurar el prompt" icon="pencil" href="/agentes/configurar-prompt">
+    Escribí instrucciones claras para definir cómo responde el agente.
+  </Card>
+  <Card title="Agregar base de conocimiento" icon="book" href="/agentes/base-de-conocimiento">
+    Subí documentos para que el agente responda con información precisa.
+  </Card>
+  <Card title="Probar en el playground" icon="flask-conical" href="/agentes/playground">
+    Simulá conversaciones antes de activar el agente en un canal real.
+  </Card>
+  <Card title="Conectar a un canal" icon="radio" href="/canales/resumen">
+    Asigná el agente a WhatsApp, Instagram o Chatwoot.
+  </Card>
+</CardGroup>

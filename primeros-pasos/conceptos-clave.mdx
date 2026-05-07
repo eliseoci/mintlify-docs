@@ -1,0 +1,58 @@
+---
+title: Conceptos clave
+description: Los términos fundamentales que necesitás entender para operar Nexo AI con confianza.
+---
+
+## Agente
+
+Un agente es la IA que responde a los mensajes de tus clientes. Cada agente tiene:
+
+- **Prompt**: instrucciones que definen su comportamiento, tono y límites.
+- **Base de conocimiento**: documentos o textos que el agente usa para responder con precisión.
+- **Canales asignados**: los medios por los que el agente recibe y envía mensajes.
+
+Un mismo agente puede estar conectado a múltiples canales. Un mismo canal solo puede tener un agente activo a la vez.
+
+## Canal
+
+Un canal es el medio de comunicación conectado a Nexo. Los canales disponibles son:
+
+| Canal | Protocolo |
+|---|---|
+| WhatsApp API | WhatsApp Business API (Meta) |
+| WhatsApp Web | Sesión de WhatsApp Web (QR) |
+| Instagram | Meta Graph API |
+| Chatwoot | Webhook / API propia |
+
+## Contacto
+
+Un contacto es una persona que interactuó con alguno de tus canales. Nexo crea o actualiza un registro de contacto automáticamente cada vez que alguien inicia una conversación.
+
+## Conversación
+
+Una conversación es el hilo de mensajes entre un contacto y tu agente en un canal determinado. Nexo registra el historial completo de cada conversación.
+
+## Campaña
+
+Una campaña es un envío masivo de mensajes a un segmento de contactos. Podés usar campañas para:
+
+- Comunicados
+- Promociones
+- Recordatorios
+- Re-engagement
+
+## Seguimiento (Follow-up)
+
+Un seguimiento es un mensaje automático que se envía cuando una conversación no recibe respuesta después de un tiempo definido. La **Cola de seguimientos** te muestra todos los seguimientos pendientes y te permite gestionarlos manualmente si preferís.
+
+## Cliente
+
+En el contexto multi-tenant de Nexo, un cliente es una cuenta independiente dentro de tu operación. Cada cliente tiene su propio conjunto de agentes, canales y contactos.
+
+## Agencia
+
+Una agencia es una entidad que agrupa y gestiona múltiples clientes. Las agencias tienen acceso a la administración centralizada de sus clientes desde una sola vista.
+
+## Plantilla
+
+Una plantilla es un modelo de agente preconfigurado que podés usar como punto de partida. Las plantillas definen el prompt base y la estructura de conocimiento recomendada para casos de uso comunes.

@@ -1,0 +1,58 @@
+---
+title: WhatsApp API
+description: Conectá tu número de WhatsApp Business API para mensajería de alto volumen y campañas.
+---
+
+La WhatsApp Business API es la opción recomendada para negocios que reciben muchos mensajes o necesitan enviar campañas masivas. A diferencia de WhatsApp Web, es una conexión estable que no depende de tener el teléfono encendido.
+
+## Requisitos previos
+
+Antes de conectar WhatsApp API en Nexo, necesitás tener configurado:
+
+1. **Cuenta de Meta Business Manager** activa y verificada.
+2. **Información del negocio completa en Meta** — [cómo hacerlo](/integraciones/meta-informacion-negocio).
+3. **Número de teléfono** dedicado a WhatsApp Business (no puede ser el mismo que usás en WhatsApp personal).
+4. **App de Meta** creada en el portal de desarrolladores con permisos de WhatsApp.
+
+<Warning>
+  Si tu cuenta de Meta Business no tiene la información del negocio completa, el número no será aprobado. Completá ese paso primero.
+</Warning>
+
+## Configurar en Nexo
+
+<Steps>
+  <Step title="Ir a Canales">
+    Desde el menú lateral, seleccioná **Canales** y luego **WhatsApp API**.
+  </Step>
+
+  <Step title="Ingresar credenciales">
+    Completá los datos de tu integración de Meta:
+
+    - **Phone Number ID**: el ID del número en Meta.
+    - **WhatsApp Business Account ID**: el ID de tu cuenta WABA.
+    - **Token de acceso**: el token permanente de tu app de Meta.
+  </Step>
+
+  <Step title="Verificar la conexión">
+    Hacé clic en **Verificar**. Nexo enviará un mensaje de prueba para confirmar que todo funciona.
+  </Step>
+
+  <Step title="Asignar agente">
+    Seleccioná el agente que va a responder los mensajes entrantes en este canal.
+  </Step>
+</Steps>
+
+## Diferencias con WhatsApp Web
+
+| Característica | WhatsApp API | WhatsApp Web |
+|---|---|---|
+| Requiere teléfono encendido | No | Sí |
+| Límite de mensajes | Alto (escalable) | Bajo |
+| Campañas masivas | Sí | No |
+| Configuración | Requiere Meta Business | Solo QR |
+
+## Próximo paso
+
+<Card title="Completar información de negocio en Meta" icon="shield-check" href="/integraciones/meta-informacion-negocio">
+  Paso obligatorio para que Meta apruebe tu número de WhatsApp Business.
+</Card>

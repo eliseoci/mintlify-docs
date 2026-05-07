@@ -1,0 +1,47 @@
+---
+title: Playground
+description: Probá tu agente con conversaciones simuladas antes de conectarlo a un canal real.
+---
+
+El Playground es el espacio donde podés hablar directamente con tu agente, como si fueras un cliente, sin afectar ningún canal en producción.
+
+## ¿Para qué sirve?
+
+- Verificar que el prompt funciona como esperás.
+- Probar casos borde ("¿qué pasa si el cliente pregunta X?").
+- Ajustar el comportamiento antes de activar el agente.
+- Demostrar el agente a un cliente o stakeholder.
+
+## Cómo usarlo
+
+<Steps>
+  <Step title="Ir al Playground">
+    Desde el menú lateral, seleccioná **Playground**.
+  </Step>
+
+  <Step title="Seleccionar agente y cliente">
+    Elegí el agente que querés probar y el cliente/cuenta de contexto. El agente usa la configuración exacta que tiene en producción.
+  </Step>
+
+  <Step title="Iniciar la conversación">
+    Escribí mensajes como si fueras un usuario real. El agente responde en tiempo real usando el prompt y la base de conocimiento configurados.
+  </Step>
+
+  <Step title="Iterar sobre el prompt">
+    Si algo no funciona bien, volvé a **Agentes**, ajustá el prompt y probá de nuevo en el playground.
+  </Step>
+</Steps>
+
+## Ver el trace de la conversación
+
+El playground muestra un panel de **trazas** (traces) donde podés ver exactamente cómo el agente procesó tu mensaje: qué instrucciones siguió, qué información de la base de conocimiento usó y por qué respondió lo que respondió.
+
+<Tip>
+  Las trazas son especialmente útiles para depurar respuestas inesperadas. Si el agente responde algo raro, revisá el trace para entender qué pasó internamente.
+</Tip>
+
+## Limitaciones del playground
+
+- Las conversaciones del playground **no se guardan** en el historial de contactos.
+- No envía mensajes reales a ningún canal externo.
+- Está pensado exclusivamente para pruebas internas.

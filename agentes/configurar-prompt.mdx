@@ -1,0 +1,77 @@
+---
+title: Configurar el prompt del agente
+description: El prompt define la personalidad, el rol y los límites de tu agente. Cómo escribirlo bien.
+---
+
+El prompt es el conjunto de instrucciones que le decís al agente quién es, cómo habla y qué puede o no puede hacer. Es la diferencia entre un agente útil y uno que responde cualquier cosa.
+
+## Estructura recomendada
+
+Un buen prompt tiene tres partes:
+
+### 1. Rol y contexto
+
+Describí quién es el agente y para qué empresa trabaja.
+
+```
+Sos el asistente de ventas de [Empresa], especializado en [producto/servicio].
+Tu trabajo es ayudar a los clientes a entender las opciones disponibles y guiarlos hacia una compra o una demo.
+```
+
+### 2. Tono y estilo
+
+Definí cómo habla el agente.
+
+```
+Respondé siempre en español, de forma amigable y directa.
+Usá un tono profesional pero cercano. Evitá respuestas largas — sé conciso.
+Si no sabés algo, decilo honestamente y ofrecé derivar a un humano.
+```
+
+### 3. Límites y reglas
+
+Definí qué no debe hacer el agente.
+
+```
+No menciones precios sin antes preguntar el país del cliente.
+No hagas promesas de tiempos de entrega que no estén en la base de conocimiento.
+No respondas preguntas que no sean sobre [producto/servicio].
+```
+
+## Ejemplo completo
+
+```
+Sos el asistente de ventas de Acme Corp, una empresa de software de gestión de inventarios.
+
+Tu objetivo es ayudar a los visitantes a entender si Acme Corp es la solución correcta para su negocio,
+responder dudas sobre funcionalidades y agendar demos con el equipo de ventas.
+
+Respondé siempre en español rioplatense, de forma directa y sin rodeos.
+Usá párrafos cortos. Si el usuario pregunta algo fuera de tu área, decile
+"Eso está fuera de lo que puedo ayudarte, pero podés contactar a nuestro equipo en soporte@acme.com".
+
+No inventes funcionalidades. Si no sabés la respuesta, decilo.
+```
+
+## Errores comunes
+
+<AccordionGroup>
+  <Accordion title="Prompt demasiado corto">
+    Un prompt de dos líneas no da suficiente contexto. El agente llena los vacíos de forma impredecible.
+    **Mínimo recomendado**: 100 palabras con rol, tono y al menos una regla de límite.
+  </Accordion>
+  <Accordion title="No definir qué hacer cuando el agente no sabe algo">
+    Si no instruís al agente sobre cómo manejar preguntas fuera de su área, va a inventar respuestas.
+    Siempre incluí una instrucción del tipo: "Si no sabés, decilo y ofrecé [acción alternativa]".
+  </Accordion>
+  <Accordion title="Instrucciones contradictorias">
+    "Sé breve" + "siempre explica todos los detalles" es una contradicción. El agente va a ignorar una de las dos.
+    Revisá que las instrucciones sean coherentes entre sí.
+  </Accordion>
+</AccordionGroup>
+
+## Próximo paso
+
+<Card title="Probar en el playground" icon="flask-conical" href="/agentes/playground">
+  Antes de publicar, verificá que el agente responde como esperás en el playground.
+</Card>

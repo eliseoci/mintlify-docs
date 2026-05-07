@@ -1,0 +1,50 @@
+---
+title: Chatwoot
+description: Integrá Nexo con tu instancia de Chatwoot para gestión centralizada de conversaciones.
+---
+
+Chatwoot es una plataforma de mesa de ayuda open source. La integración con Nexo te permite que el agente IA atienda conversaciones dentro de Chatwoot, escale a un agente humano cuando sea necesario y mantenga el historial unificado.
+
+## Cómo funciona la integración
+
+1. Un cliente envía un mensaje a tu canal de Chatwoot (WhatsApp, email, chat web, etc.).
+2. Nexo recibe el mensaje a través del webhook de Chatwoot.
+3. El agente IA responde automáticamente dentro del hilo de Chatwoot.
+4. Si el agente no puede resolver el problema, escala a un agente humano en Chatwoot.
+
+## Conectar Chatwoot en Nexo
+
+<Steps>
+  <Step title="Obtener credenciales de Chatwoot">
+    En tu instancia de Chatwoot, andá a **Configuración → Integraciones → API Access** y copiá tu API Key.
+
+    También necesitás el **Account ID** y la **URL de tu instancia** (ej: `https://app.chatwoot.com`).
+  </Step>
+
+  <Step title="Ir a Canales en Nexo">
+    Desde el menú lateral, seleccioná **Canales** y luego **Chatwoot**.
+  </Step>
+
+  <Step title="Ingresar credenciales">
+    Completá:
+    - **URL de la instancia** de Chatwoot.
+    - **API Key** de Chatwoot.
+    - **Account ID** de Chatwoot.
+  </Step>
+
+  <Step title="Configurar el webhook">
+    Nexo genera una URL de webhook que tenés que registrar en Chatwoot. Andá a **Configuración → Integraciones → Webhooks** en Chatwoot y pegá la URL que te provee Nexo.
+  </Step>
+
+  <Step title="Asignar agente">
+    Seleccioná el agente de Nexo que va a responder en este canal.
+  </Step>
+</Steps>
+
+## Invitar agentes de Chatwoot
+
+Nexo puede enviar invitaciones a los agentes de tu cuenta de Chatwoot para que tengan acceso coordinado. Desde **Configuración** en Nexo, buscá la opción de invitación de Chatwoot.
+
+<Tip>
+  Configurá en Chatwoot un bot de escalado para que el agente IA de Nexo sea el primer respondedor y solo escale a humano cuando sea necesario. Esto reduce la carga del equipo sin perder la calidad de atención.
+</Tip>

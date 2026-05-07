@@ -1,0 +1,50 @@
+---
+title: WhatsApp Web
+description: Conectá tu WhatsApp escaneando un código QR. Sin configuración de Meta, listo en minutos.
+---
+
+WhatsApp Web te permite conectar tu número de WhatsApp escaneando un QR desde Nexo, igual que cuando abrís web.whatsapp.com. Es la forma más rápida de empezar, pero tiene limitaciones respecto a la API.
+
+## Cuándo usar WhatsApp Web
+
+Usá WhatsApp Web si:
+
+- Querés probar Nexo rápido sin configurar una cuenta de Meta Business.
+- Tu volumen de mensajes es bajo (menos de 100 conversaciones diarias).
+- El teléfono vinculado puede mantenerse encendido y conectado a internet.
+
+<Warning>
+  Si el teléfono se desconecta, se queda sin batería o WhatsApp cierra sesión, el agente deja de funcionar. Para operaciones críticas, usá [WhatsApp API](/canales/whatsapp-api).
+</Warning>
+
+## Cómo conectar
+
+<Steps>
+  <Step title="Ir a Canales">
+    Desde el menú lateral, seleccioná **Canales** y luego **WhatsApp Web**.
+  </Step>
+
+  <Step title="Escanear el código QR">
+    Aparecerá un código QR en pantalla. Abrí WhatsApp en tu teléfono, andá a **Dispositivos vinculados** y escaneá el código.
+  </Step>
+
+  <Step title="Confirmar la conexión">
+    Una vez vinculado, el estado cambia a **Conectado**. Nexo ya puede recibir y enviar mensajes a través de ese número.
+  </Step>
+
+  <Step title="Asignar agente">
+    Seleccioná el agente que va a responder los mensajes entrantes en este canal.
+  </Step>
+</Steps>
+
+## Reconectar la sesión
+
+Si la sesión se cierra (el QR expira o el teléfono se desconectó), vas a ver el estado **Desconectado** en Nexo. Para reconectar:
+
+1. Andá a **Canales → WhatsApp Web**.
+2. Hacé clic en **Reconectar**.
+3. Escaneá el nuevo QR desde tu teléfono.
+
+<Tip>
+  Dejá el teléfono conectado a la corriente y con Wi-Fi estable para minimizar desconexiones.
+</Tip>

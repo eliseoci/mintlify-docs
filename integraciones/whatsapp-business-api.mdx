@@ -1,0 +1,80 @@
+---
+title: Configurar WhatsApp Business API en Meta
+description: Cómo crear la app, obtener las credenciales y conectarlas a Nexo.
+---
+
+Antes de conectar WhatsApp API en Nexo, necesitás crear una app en el portal de desarrolladores de Meta y obtener las credenciales de acceso. Esta guía te lleva paso a paso por ese proceso.
+
+## Requisitos previos
+
+- Cuenta de **Meta Business Manager** activa.
+- **Información del negocio completa** — [ver cómo](/integraciones/meta-informacion-negocio).
+- Un **número de teléfono** dedicado que no esté registrado en WhatsApp personal ni WhatsApp Business App.
+
+## Paso 1: Crear una app en Meta Developers
+
+<Steps>
+  <Step title="Ir a Meta for Developers">
+    Ingresá a [developers.facebook.com](https://developers.facebook.com) e iniciá sesión con tu cuenta de Meta Business.
+  </Step>
+
+  <Step title="Crear una nueva app">
+    Hacé clic en **Mis apps → Crear app**.
+
+    Seleccioná el tipo de app: **Business** (para WhatsApp API necesitás este tipo).
+  </Step>
+
+  <Step title="Completar los datos de la app">
+    - **Nombre de la app**: cualquier nombre interno (no es visible para los usuarios).
+    - **Email de contacto**: tu email de negocio.
+    - **Portafolio de negocios**: seleccioná tu cuenta de Meta Business Manager.
+  </Step>
+
+  <Step title="Agregar WhatsApp como producto">
+    En el panel de la app, buscá **WhatsApp** en la lista de productos y hacé clic en **Configurar**.
+  </Step>
+</Steps>
+
+## Paso 2: Agregar el número de teléfono
+
+<Steps>
+  <Step title="Ir a la configuración de WhatsApp en la app">
+    Dentro de tu app de Meta, andá a **WhatsApp → Configuración de API**.
+  </Step>
+
+  <Step title="Agregar número de teléfono">
+    Hacé clic en **Agregar número de teléfono**. Ingresá el número en formato internacional (ej: +54 11 2345-6789).
+  </Step>
+
+  <Step title="Verificar el número">
+    Meta enviará un código de verificación por SMS o llamada al número ingresado. Ingresá el código para confirmar.
+  </Step>
+</Steps>
+
+## Paso 3: Obtener las credenciales para Nexo
+
+Una vez que el número está verificado, necesitás tres datos para conectarlo en Nexo:
+
+| Credencial | Dónde encontrarla |
+|---|---|
+| **Phone Number ID** | En **WhatsApp → Configuración de API** → sección del número |
+| **WhatsApp Business Account ID** | En **WhatsApp → Configuración de API** → arriba del número |
+| **Token de acceso permanente** | En **Configuración → Avanzado → Tokens de acceso del sistema** |
+
+<Warning>
+  El token temporal que Meta muestra por defecto expira en 24 horas. Para uso en producción, necesitás generar un **token de acceso permanente** desde la configuración avanzada de la app.
+</Warning>
+
+## Paso 4: Conectar en Nexo
+
+Con las tres credenciales en mano, andá a **Canales → WhatsApp API** en Nexo y pegá los datos. [Ver cómo conectar WhatsApp API en Nexo](/canales/whatsapp-api).
+
+## Verificación del negocio
+
+Para aumentar los límites de mensajería (por defecto son 1.000 conversaciones por día), necesitás completar la **Verificación del Negocio** en Meta Business Manager.
+
+Andá a **Meta Business Manager → Centro de seguridad** y seguí las instrucciones para subir los documentos legales de tu empresa.
+
+---
+
+¿Necesitás ayuda con algún paso? [Contactanos](https://app.nexoai.group).

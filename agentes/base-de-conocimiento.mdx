@@ -1,0 +1,53 @@
+---
+title: Base de conocimiento
+description: Agregá información específica de tu negocio para que el agente responda con precisión.
+---
+
+La base de conocimiento es el conjunto de información que el agente puede consultar cuando responde. Sin ella, el agente solo puede basarse en su conocimiento general — que puede ser incorrecto o incompleto para tu negocio.
+
+## ¿Cuándo necesitás una base de conocimiento?
+
+Usá la base de conocimiento cuando el agente necesite responder preguntas sobre:
+
+- Productos o servicios específicos de tu empresa.
+- Precios, planes o condiciones comerciales.
+- Políticas de devolución, envío o atención.
+- Preguntas frecuentes (FAQs).
+- Documentación técnica o guías de uso.
+
+## Cómo agregar contenido
+
+<Steps>
+  <Step title="Ir a Base de conocimiento">
+    Desde el menú lateral, seleccioná **Base de conocimiento**.
+  </Step>
+
+  <Step title="Agregar contenido">
+    Podés ingresar información de dos formas:
+
+    - **Texto libre**: escribí o pegá el contenido directamente.
+    - **Documentos**: subí archivos PDF, Word o texto plano.
+  </Step>
+
+  <Step title="Asignar al agente">
+    La base de conocimiento se asocia al agente automáticamente según la configuración de tu cuenta. Verificá que el agente correcto esté activo en el playground después de agregar contenido.
+  </Step>
+</Steps>
+
+## Buenas prácticas
+
+<AccordionGroup>
+  <Accordion title="Sé específico, no genérico">
+    "Somos una empresa de tecnología" no es útil. "Nuestro plan Básico incluye 3 usuarios, 10GB de almacenamiento y soporte por email de lunes a viernes" sí lo es.
+  </Accordion>
+  <Accordion title="Actualizá el contenido cuando cambien tus precios o políticas">
+    El agente responde con la información que tiene. Si cambiaron los precios y no actualizaste la base de conocimiento, va a dar información desactualizada.
+  </Accordion>
+  <Accordion title="Evitá contradicciones entre el prompt y la base">
+    Si el prompt dice "no menciones precios" pero la base tiene una tabla de precios, puede generar comportamiento inconsistente. Alineá ambos.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  La base de conocimiento complementa el prompt — no lo reemplaza. El prompt define el comportamiento; la base de conocimiento aporta los datos.
+</Note>
