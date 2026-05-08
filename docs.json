@@ -8,7 +8,7 @@
     "light": "#8B6BFF",
     "dark": "#5535D4"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/favicon.png",
   "icons": {
     "library": "lucide"
   },
