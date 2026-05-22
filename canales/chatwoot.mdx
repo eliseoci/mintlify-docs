@@ -1,50 +1,134 @@
 ---
-title: Chatwoot
-description: Integrá Nexo con tu instancia de Chatwoot para gestión centralizada de conversaciones.
+title: Chatwoot para agentes humanos
+description: Guía simple para que tu equipo atienda conversaciones en Chatwoot desde la web o la app móvil.
 ---
 
-Chatwoot es una plataforma de mesa de ayuda open source. La integración con Nexo te permite que el agente IA atienda conversaciones dentro de Chatwoot, escale a un agente humano cuando sea necesario y mantenga el historial unificado.
+Esta guía es para las personas que responden conversaciones todos los días. No necesitás configurar APIs, webhooks ni nada técnico. Tu trabajo es entrar a Chatwoot, ver qué conversaciones necesitan atención, responder con claridad y cerrar cuando el cliente ya quedó atendido.
 
-## Cómo funciona la integración
+<Info>
+  Usá esta instancia de Chatwoot: [https://chatwoot-production-62ad.up.railway.app](https://chatwoot-production-62ad.up.railway.app)
+</Info>
 
-1. Un cliente envía un mensaje a tu canal de Chatwoot (WhatsApp, email, chat web, etc.).
-2. Nexo recibe el mensaje a través del webhook de Chatwoot.
-3. El agente IA responde automáticamente dentro del hilo de Chatwoot.
-4. Si el agente no puede resolver el problema, escala a un agente humano en Chatwoot.
+## Antes de empezar
 
-## Conectar Chatwoot en Nexo
+Pedile a tu responsable estos datos:
+
+- Tu **email** de acceso.
+- Tu **contraseña**.
+- Qué conversaciones tenés que atender: asignadas a vos, sin asignar o de una bandeja específica.
+
+<Warning>
+  No compartas tu contraseña por WhatsApp, email ni mensajes internos. Si no podés entrar, pedí que te restablezcan el acceso.
+</Warning>
+
+## Entrar desde la computadora
 
 <Steps>
-  <Step title="Obtener credenciales de Chatwoot">
-    En tu instancia de Chatwoot, andá a **Configuración → Integraciones → API Access** y copiá tu API Key.
-
-    También necesitás el **Account ID** y la **URL de tu instancia** (ej: `https://app.chatwoot.com`).
+  <Step title="Abrí Chatwoot en el navegador">
+    Entrá a [https://chatwoot-production-62ad.up.railway.app](https://chatwoot-production-62ad.up.railway.app).
   </Step>
 
-  <Step title="Ir a Canales en Nexo">
-    Desde el menú lateral, seleccioná **Canales** y luego **Chatwoot**.
+  <Step title="Iniciá sesión">
+    Escribí tu **email** y tu **contraseña**. Después hacé clic en **Sign In**.
   </Step>
 
-  <Step title="Ingresar credenciales">
-    Completá:
-    - **URL de la instancia** de Chatwoot.
-    - **API Key** de Chatwoot.
-    - **Account ID** de Chatwoot.
-  </Step>
-
-  <Step title="Configurar el webhook">
-    Nexo genera una URL de webhook que tenés que registrar en Chatwoot. Andá a **Configuración → Integraciones → Webhooks** en Chatwoot y pegá la URL que te provee Nexo.
-  </Step>
-
-  <Step title="Asignar agente">
-    Seleccioná el agente de Nexo que va a responder en este canal.
+  <Step title="Abrí la bandeja de conversaciones">
+    Cuando entres, buscá la sección de conversaciones o inbox. Desde ahí vas a ver los chats que podés atender.
   </Step>
 </Steps>
 
-## Invitar agentes de Chatwoot
-
-Nexo puede enviar invitaciones a los agentes de tu cuenta de Chatwoot para que tengan acceso coordinado. Desde **Configuración** en Nexo, buscá la opción de invitación de Chatwoot.
-
 <Tip>
-  Configurá en Chatwoot un bot de escalado para que el agente IA de Nexo sea el primer respondedor y solo escale a humano cuando sea necesario. Esto reduce la carga del equipo sin perder la calidad de atención.
+  Si trabajás todos los días desde una computadora, guardá la URL en favoritos. Es el camino más simple y evita confusiones con otras instalaciones de Chatwoot.
 </Tip>
+
+## Entrar desde el celular
+
+Podés usar Chatwoot desde iPhone o Android. La app sirve para responder cuando no estás en la computadora, pero tiene un paso extra: primero tenés que cambiar la URL de instalación.
+
+<CardGroup cols={2}>
+  <Card title="Descargar para iPhone" icon="apple" href="https://apps.apple.com/ar/app/chatwoot/id1495796682">
+    Instalá la app oficial de Chatwoot desde App Store.
+  </Card>
+  <Card title="Descargar para Android" icon="smartphone" href="https://play.google.com/store/apps/details?id=com.chatwoot.app&hl=es_AR">
+    Instalá la app oficial de Chatwoot desde Google Play.
+  </Card>
+</CardGroup>
+
+<Steps>
+  <Step title="Abrí la app de Chatwoot">
+    Al abrirla por primera vez, la app puede mostrar que estás conectado a `app.chatwoot.com`. Esa no es la instalación correcta para tu equipo.
+  </Step>
+
+  <Step title="Tocá Change URL">
+    Debajo del botón **Sign In**, tocá **Change URL**.
+
+    <img src="/images/chatwoot/mobile-change-url.jpg" alt="Pantalla de inicio de sesión de Chatwoot con la opción Change URL marcada" width="280" />
+  </Step>
+
+  <Step title="Ingresá la URL de instalación">
+    En **URL de instalación**, escribí:
+
+    ```txt
+    https://chatwoot-production-62ad.up.railway.app/
+    ```
+
+    Después tocá **Conectar**.
+
+    <img src="/images/chatwoot/mobile-installation-url.jpg" alt="Pantalla de URL de instalación de Chatwoot con la instancia de AgentOS" width="280" />
+  </Step>
+
+  <Step title="Entrá con tus credenciales">
+    Cuando la app se conecte a la instalación correcta, escribí tu **email** y tu **contraseña**. Después tocá **Sign In**.
+  </Step>
+</Steps>
+
+<Warning>
+  Si la app sigue diciendo que estás conectado a `app.chatwoot.com`, no sigas. Tocá **Change URL** y cargá la URL de instalación de nuevo. Si entrás en la instalación equivocada, no vas a ver las conversaciones de tu equipo.
+</Warning>
+
+## Cómo trabajar una conversación
+
+<Steps>
+  <Step title="Elegí una conversación">
+    Abrí una conversación asignada a vos o una conversación que tu responsable te indicó atender. Si no sabés cuál tomar, preguntá antes de responder.
+  </Step>
+
+  <Step title="Leé el contexto completo">
+    Antes de escribir, revisá los últimos mensajes del cliente. Si hay historial, leelo. Responder sin contexto genera errores, repreguntas innecesarias y mala atención.
+  </Step>
+
+  <Step title="Respondé de forma clara">
+    Escribí una respuesta corta, concreta y útil. Si necesitás confirmar un dato, hacé una pregunta simple. No inventes información.
+  </Step>
+
+  <Step title="Pedí ayuda cuando haga falta">
+    Si el caso requiere autorización, precio especial, reclamo sensible o información que no tenés, pedí ayuda a tu responsable antes de prometer algo al cliente.
+  </Step>
+
+  <Step title="Cerrá cuando esté resuelto">
+    Cuando el cliente ya recibió respuesta y no queda ninguna acción pendiente, marcá la conversación como resuelta según el flujo que use tu equipo.
+  </Step>
+</Steps>
+
+## Buenas prácticas para agentes humanos
+
+- Respondé como una persona: claro, amable y sin sonar robótico.
+- No prometas descuentos, tiempos de entrega ni soluciones si no están confirmadas.
+- No borres ni ocultes información importante del caso.
+- Si el cliente está molesto, priorizá entender el problema antes de defender la respuesta anterior.
+- Si una conversación fue atendida por IA antes de llegar a vos, revisá qué dijo la IA antes de continuar.
+- Si no entendés qué hacer, preguntá. Mejor frenar 2 minutos que responder mal.
+
+## Problemas frecuentes
+
+| Problema | Qué hacer |
+|---|---|
+| No puedo entrar desde la web | Revisá que estés usando `https://chatwoot-production-62ad.up.railway.app`. Si la URL está bien, pedí que revisen tus credenciales. |
+| La app móvil no muestra mis conversaciones | Verificá que hayas tocado **Change URL** y usado `https://chatwoot-production-62ad.up.railway.app/`. |
+| Me olvidé la contraseña | Pedí a tu responsable que te restablezca el acceso. |
+| No sé qué conversación responder | No adivines. Consultá qué bandeja o conversaciones tenés asignadas. |
+| No sé qué contestar | Revisá el contexto y pedí ayuda antes de prometer algo al cliente. |
+
+<Info>
+  La idea es simple: Chatwoot es el lugar donde el equipo humano atiende al cliente. AgentOS puede ayudar con automatización, pero cuando una persona toma la conversación, la prioridad es responder bien, con contexto y sin inventar.
+</Info>
