@@ -1,41 +1,31 @@
 ---
-title: Seguimientos (Follow-ups)
-description: Automatizá mensajes de seguimiento para contactos que no respondieron.
+title: Seguimientos automáticos
+description: Revisá los mensajes de seguimiento y distinguí la automatización de las tareas del equipo.
 ---
+Un seguimiento automático es un mensaje definido en la configuración de atención. Una [tarea](/tareas/crear-y-gestionar) es una acción pendiente de una persona: crearla no envía un mensaje.
 
-Un seguimiento es un mensaje automático que Nexo envía cuando una conversación no recibe respuesta del contacto después de un tiempo definido. La **Cola de seguimientos** centraliza todos los seguimientos pendientes para que puedas gestionarlos en un solo lugar.
+## Revisar la configuración
 
-## ¿Cómo funcionan?
+Entrá a **Seguimientos**, si tu rol lo permite, y revisá qué secuencias o mensajes están habilitados en tu organización.
 
-1. El agente envía un mensaje a un contacto.
-2. El contacto no responde en el tiempo configurado (ej: 24 horas).
-3. Nexo pone esa conversación en la **Cola de seguimientos**.
-4. El agente (o un operador humano) envía el mensaje de seguimiento.
+Antes de activarlos, confirmá:
 
-## Ver la cola de seguimientos
+- Qué condición inicia el seguimiento.
+- Cuánto tiempo debe pasar.
+- Qué mensaje o instrucciones se usarán.
+- Qué canal lo enviará.
+- Cuándo debe dejar de enviarse.
 
-Desde el menú lateral, seleccioná **Seguimientos**. Vas a ver una lista de conversaciones que esperan un follow-up, ordenadas por antigüedad.
+## Revisar un pendiente
 
-Para cada conversación podés:
+Consultá el contexto de la conversación antes de usar una acción disponible en la cola. Si el cliente ya respondió o una persona tomó el caso, revisá si ese seguimiento sigue correspondiendo.
 
-- **Ver el historial**: qué se habló antes.
-- **Enviar el seguimiento**: el agente manda el mensaje de seguimiento automáticamente.
-- **Descartar**: marcás la conversación como resuelta sin enviar follow-up.
-- **Asignar a un humano**: escalás la conversación para atención manual.
+Descartar un seguimiento no equivale a marcar una venta o a completar una tarea humana.
 
-## Configurar el tiempo de espera
+## Plantillas de WhatsApp
 
-Podés configurar cuánto tiempo debe pasar sin respuesta antes de que una conversación entre a la cola. Este ajuste está disponible en **Configuración → Seguimientos**.
+Cuando el envío requiere una plantilla aprobada, elegila y completá sus variables. Revisá el estado de la [plantilla](/campanas/plantillas-whatsapp) antes de activar el seguimiento.
 
-<Tip>
-  Un tiempo de espera demasiado corto (ej: 1 hora) puede generar demasiado ruido. Un tiempo demasiado largo (ej: 7 días) hace que pierdas oportunidades. Entre 24 y 48 horas funciona bien para la mayoría de los casos de ventas.
-</Tip>
+## Atención humana
 
-## Diferencia entre seguimiento automático y manual
-
-| Tipo | Cuándo usarlo |
-|---|---|
-| **Automático** | El agente manda el follow-up sin intervención humana |
-| **Manual** | Un operador revisa la cola y decide qué hacer en cada caso |
-
-Podés combinar ambos: configurar el agente para manejar los primeros seguimientos y escalar a humano si hay múltiples intentos sin respuesta.
+Entrar a una etapa humana del Embudo pausa la IA y puede cancelar seguimientos pendientes de ese proceso. Revisá el chat y el estado de la automatización antes de devolver la atención al agente.

@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Centro de ayuda | Nexo AI",
-  "description": "Todo lo que necesitás para configurar, operar y sacar el máximo provecho de tus agentes IA.",
+  "description": "Guías para configurar Nexo, atender clientes y organizar oportunidades y tareas.",
   "colors": {
     "primary": "#6d45f9",
     "light": "#8B6BFF",
@@ -16,7 +16,10 @@
     "eyebrows": "breadcrumbs"
   },
   "contextual": {
-    "options": ["copy", "view", "assistant"]
+    "options": [
+      "copy",
+      "assistant"
+    ]
   },
   "navigation": {
     "global": {
@@ -27,90 +30,99 @@
           "href": "/"
         },
         {
-          "anchor": "Ir al app",
+          "anchor": "Ir a Nexo",
           "icon": "arrow-up-right",
           "href": "https://app.nexoai.group"
         }
       ]
     },
-    "groups": [
+    "languages": [
       {
-        "group": "Primeros pasos",
-        "icon": "rocket",
-        "expanded": true,
-        "pages": [
-          "primeros-pasos/que-es-nexo",
-          "primeros-pasos/inicio-rapido",
-          "primeros-pasos/conceptos-clave"
-        ]
-      },
-      {
-        "group": "Agentes",
-        "icon": "bot",
-        "pages": [
-          "agentes/crear-agente",
-          "agentes/configurar-prompt",
-          "agentes/playground",
-          "agentes/base-de-conocimiento"
-        ]
-      },
-      {
-        "group": "Canales",
-        "icon": "radio",
-        "pages": [
-          "canales/resumen",
-          "canales/whatsapp-api",
-          "canales/whatsapp-web",
-          "canales/instagram",
-          "canales/chatwoot"
-        ]
-      },
-      {
-        "group": "Campañas",
-        "icon": "megaphone",
-        "pages": [
-          "campanas/crear-campana",
-          "campanas/seguimientos"
-        ]
-      },
-      {
-        "group": "Contactos",
-        "icon": "users",
-        "pages": [
-          "contactos/gestionar-contactos",
-          "contactos/conversaciones"
-        ]
-      },
-      {
-        "group": "Clientes y agencias",
-        "icon": "building-2",
-        "pages": [
-          "clientes-agencias/gestionar-clientes",
-          "clientes-agencias/agencias",
-          "clientes-agencias/roles-permisos"
-        ]
-      },
-      {
-        "group": "Analítica",
-        "icon": "chart-bar",
-        "pages": [
-          "analitica/dashboard"
-        ]
-      },
-      {
-        "group": "Integraciones",
-        "icon": "plug",
-        "pages": [
-          "integraciones/meta-informacion-negocio",
-          "integraciones/whatsapp-business-api"
-        ]
-      },
-      {
-        "group": "Configuración",
-        "icon": "settings",
-        "pages": [
-          "configuracion/ajustes-generales",
-          "configuracion/mi-cuenta"
+        "language": "es",
+        "groups": [
+          {
+            "group": "Empezar con Nexo",
+            "icon": "rocket",
+            "pages": [
+              "primeros-pasos/que-es-nexo",
+              "primeros-pasos/inicio-rapido",
+              "primeros-pasos/acceso",
+              "primeros-pasos/conceptos-clave"
+            ]
+          },
+          {
+            "group": "Organización y equipo",
+            "icon": "users",
+            "pages": [
+              "organizacion/roles-permisos",
+              "organizacion/planes-consumo"
+            ]
+          },
+          {
+            "group": "Asistente IA",
+            "icon": "bot",
+            "pages": [
+              "agentes/crear-agente",
+              "agentes/configurar-prompt",
+              "agentes/base-de-conocimiento",
+              "agentes/enviar-archivos",
+              "agentes/playground"
+            ]
+          },
+          {
+            "group": "Canales",
+            "icon": "radio",
+            "pages": [
+              "canales/resumen",
+              "canales/whatsapp-api",
+              "canales/whatsapp-web",
+              "canales/instagram"
+            ]
+          },
+          {
+            "group": "Conversaciones y CRM",
+            "icon": "messages-square",
+            "pages": [
+              "contactos/conversaciones",
+              "contactos/gestionar-contactos",
+              "canales/chatwoot"
+            ]
+          },
+          {
+            "group": "Embudo",
+            "icon": "columns-3",
+            "pages": [
+              "embudo/introduccion",
+              "embudo/configurar-etapas",
+              "embudo/gestionar-oportunidades",
+              "embudo/movimiento-ia"
+            ]
+          },
+          {
+            "group": "Tareas",
+            "icon": "list-checks",
+            "pages": [
+              "tareas/crear-y-gestionar",
+              "tareas/supervisar-equipo"
+            ]
+          },
+          {
+            "group": "Campañas y seguimientos",
+            "icon": "megaphone",
+            "pages": [
+              "campanas/plantillas-whatsapp",
+              "campanas/crear-campana",
+              "campanas/seguimientos"
+            ]
+          },
+          {
+            "group": "Actividad y ayuda",
+            "icon": "circle-help",
+            "pages": [
+              "analitica/dashboard",
+              "ayuda/problemas-frecuentes"
+            ]
+          }
         ]
       }
     ]
@@ -123,19 +135,43 @@
     "links": [],
     "primary": {
       "type": "button",
-      "label": "Ir al app",
+      "label": "Ir a Nexo",
       "href": "https://app.nexoai.group"
-    }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/nexoai",
-      "linkedin": "https://linkedin.com/company/nexoai"
     }
   },
   "seo": {
     "metatags": {
       "canonical": "https://docs.nexoai.group"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/clientes-agencias/agencias",
+      "destination": "/primeros-pasos/inicio-rapido"
+    },
+    {
+      "source": "/clientes-agencias/gestionar-clientes",
+      "destination": "/primeros-pasos/inicio-rapido"
+    },
+    {
+      "source": "/clientes-agencias/roles-permisos",
+      "destination": "/organizacion/roles-permisos"
+    },
+    {
+      "source": "/configuracion/ajustes-generales",
+      "destination": "/primeros-pasos/inicio-rapido"
+    },
+    {
+      "source": "/configuracion/mi-cuenta",
+      "destination": "/primeros-pasos/acceso"
+    },
+    {
+      "source": "/integraciones/whatsapp-business-api",
+      "destination": "/canales/whatsapp-api"
+    },
+    {
+      "source": "/integraciones/meta-informacion-negocio",
+      "destination": "/canales/whatsapp-api"
+    }
+  ]
 }

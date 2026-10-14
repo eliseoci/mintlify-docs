@@ -1,58 +1,34 @@
 ---
-title: WhatsApp API
-description: Conectá tu número de WhatsApp Business API para mensajería de alto volumen y campañas.
+title: Conectar WhatsApp API
+description: Vinculá el número de tu negocio mediante Meta y comprobá la atención.
 ---
+WhatsApp API permite conectar la mensajería de tu negocio y usar [plantillas](/campanas/plantillas-whatsapp) y [campañas](/campanas/crear-campana).
 
-La WhatsApp Business API es la opción recomendada para negocios que reciben muchos mensajes o necesitan enviar campañas masivas. A diferencia de WhatsApp Web, es una conexión estable que no depende de tener el teléfono encendido.
+Necesitás permiso para gestionar canales y una cuenta de Meta con acceso al negocio y al número que vas a conectar.
 
-## Requisitos previos
+## Conectar el número
 
-Antes de conectar WhatsApp API en Nexo, necesitás tener configurado:
+1. Abrí **WhatsApp API** en Nexo.
+2. Iniciá la conexión con Meta desde la opción disponible.
+3. Ingresá a Meta y elegí el negocio, la cuenta de WhatsApp y el número.
+4. Completá los pasos y permisos que solicita Meta.
+5. Volvé a Nexo y revisá el estado de conexión y el número elegido.
+6. Confirmá el agente que atenderá ese canal.
 
-1. **Cuenta de Meta Business Manager** activa y verificada.
-2. **Información del negocio completa en Meta** — [cómo hacerlo](/integraciones/meta-informacion-negocio).
-3. **Número de teléfono** dedicado a WhatsApp Business (no puede ser el mismo que usás en WhatsApp personal).
-4. **App de Meta** creada en el portal de desarrolladores con permisos de WhatsApp.
+Si tu cuenta usa una configuración asistida, coordiná la conexión con el equipo de Nexo antes de modificar los datos existentes.
 
-<Warning>
-  Si tu cuenta de Meta Business no tiene la información del negocio completa, el número no será aprobado. Completá ese paso primero.
-</Warning>
+## Comprobar la atención
 
-## Configurar en Nexo
+Enviá un mensaje desde un teléfono de prueba al número conectado. Revisá que llegue a la bandeja correspondiente y que responda el agente esperado.
 
-<Steps>
-  <Step title="Ir a Canales">
-    Desde el menú lateral, seleccioná **Canales** y luego **WhatsApp API**.
-  </Step>
+Probá también un pedido de atención humana. Confirmá que tu equipo pueda abrir el chat en Chatwoot.
 
-  <Step title="Ingresar credenciales">
-    Completá los datos de tu integración de Meta:
+## Mensajes fuera de la atención iniciada por el cliente
 
-    - **Phone Number ID**: el ID del número en Meta.
-    - **WhatsApp Business Account ID**: el ID de tu cuenta WABA.
-    - **Token de acceso**: el token permanente de tu app de Meta.
-  </Step>
+Para los envíos que lo requieren, seleccioná una plantilla aprobada por Meta. Una herramienta de envío de archivos no reemplaza esa aprobación.
 
-  <Step title="Verificar la conexión">
-    Hacé clic en **Verificar**. Nexo enviará un mensaje de prueba para confirmar que todo funciona.
-  </Step>
+## Cambiar el número o reconectar
 
-  <Step title="Asignar agente">
-    Seleccioná el agente que va a responder los mensajes entrantes en este canal.
-  </Step>
-</Steps>
+Revisá el número seleccionado antes de reconectar. Si hay dudas sobre una conexión existente, pedí ayuda para evitar interrumpir la atención del negocio.
 
-## Diferencias con WhatsApp Web
-
-| Característica | WhatsApp API | WhatsApp Web |
-|---|---|---|
-| Requiere teléfono encendido | No | Sí |
-| Límite de mensajes | Alto (escalable) | Bajo |
-| Campañas masivas | Sí | No |
-| Configuración | Requiere Meta Business | Solo QR |
-
-## Próximo paso
-
-<Card title="Completar información de negocio en Meta" icon="shield-check" href="/integraciones/meta-informacion-negocio">
-  Paso obligatorio para que Meta apruebe tu número de WhatsApp Business.
-</Card>
+Los requisitos y autorizaciones los muestra Meta durante la conexión. No necesitás seguir una segunda guía de credenciales para repetir el mismo proceso.

@@ -1,53 +1,29 @@
 ---
-title: Base de conocimiento
-description: Agregá información específica de tu negocio para que el agente responda con precisión.
+title: Fuentes de conocimiento
+description: Agregá y mantené la información que el agente consulta sobre tu negocio.
 ---
+Usá **Fuentes** para aportar información sobre productos, precios, políticas y preguntas frecuentes. Necesitás permiso para editar el conocimiento de tu organización.
 
-La base de conocimiento es el conjunto de información que el agente puede consultar cuando responde. Sin ella, el agente solo puede basarse en su conocimiento general — que puede ser incorrecto o incompleto para tu negocio.
+## Elegir una fuente
 
-## ¿Cuándo necesitás una base de conocimiento?
+Según las opciones habilitadas, podés trabajar con archivos, textos, páginas web y preguntas y respuestas.
 
-Usá la base de conocimiento cuando el agente necesite responder preguntas sobre:
+1. Abrí **Fuentes** y elegí el tipo de contenido.
+2. Cargá el archivo o completá la información solicitada.
+3. Guardá y esperá a que el contenido esté disponible.
+4. Probá una pregunta concreta cuya respuesta esté en esa fuente.
 
-- Productos o servicios específicos de tu empresa.
-- Precios, planes o condiciones comerciales.
-- Políticas de devolución, envío o atención.
-- Preguntas frecuentes (FAQs).
-- Documentación técnica o guías de uso.
+## Preparar contenido útil
 
-## Cómo agregar contenido
+- Incluí información vigente y específica de tu negocio.
+- Separá productos, condiciones y políticas con títulos claros.
+- Evitá versiones contradictorias de precios o plazos.
+- Actualizá o quitá contenido que ya no esté vigente.
 
-<Steps>
-  <Step title="Ir a Base de conocimiento">
-    Desde el menú lateral, seleccioná **Base de conocimiento**.
-  </Step>
+## Comprobar una respuesta
 
-  <Step title="Agregar contenido">
-    Podés ingresar información de dos formas:
+Preguntá por un dato que sólo esté en la fuente. Si la respuesta no es correcta, revisá que el contenido se haya procesado y que las instrucciones permitan usarlo.
 
-    - **Texto libre**: escribí o pegá el contenido directamente.
-    - **Documentos**: subí archivos PDF, Word o texto plano.
-  </Step>
+## Compartir el archivo con el cliente
 
-  <Step title="Asignar al agente">
-    La base de conocimiento se asocia al agente automáticamente según la configuración de tu cuenta. Verificá que el agente correcto esté activo en el playground después de agregar contenido.
-  </Step>
-</Steps>
-
-## Buenas prácticas
-
-<AccordionGroup>
-  <Accordion title="Sé específico, no genérico">
-    "Somos una empresa de tecnología" no es útil. "Nuestro plan Básico incluye 3 usuarios, 10GB de almacenamiento y soporte por email de lunes a viernes" sí lo es.
-  </Accordion>
-  <Accordion title="Actualizá el contenido cuando cambien tus precios o políticas">
-    El agente responde con la información que tiene. Si cambiaron los precios y no actualizaste la base de conocimiento, va a dar información desactualizada.
-  </Accordion>
-  <Accordion title="Evitá contradicciones entre el prompt y la base">
-    Si el prompt dice "no menciones precios" pero la base tiene una tabla de precios, puede generar comportamiento inconsistente. Alineá ambos.
-  </Accordion>
-</AccordionGroup>
-
-<Note>
-  La base de conocimiento complementa el prompt — no lo reemplaza. El prompt define el comportamiento; la base de conocimiento aporta los datos.
-</Note>
+Agregar un PDF como fuente no configura su envío al cliente. Para compartirlo, agregá una [herramienta de envío de archivos](/agentes/enviar-archivos).

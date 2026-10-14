@@ -1,62 +1,27 @@
 ---
-title: Crear una campaña
-description: Enviá mensajes masivos a tu base de contactos desde Nexo.
+title: Crear y revisar campañas
+description: Prepará destinatarios, elegí una plantilla y revisá el resultado del envío.
 ---
-
-Una campaña es un envío de mensajes a un grupo de contactos en simultáneo. Usala para comunicados, promociones, recordatorios o cualquier mensaje que necesite llegar a muchas personas a la vez.
-
-## Requisitos
-
-- Tener al menos un canal de **WhatsApp API** conectado y activo.
-- Tener contactos cargados en Nexo.
-
-<Warning>
-  Las campañas masivas por WhatsApp requieren usar **plantillas de mensaje aprobadas por Meta**. No podés enviar cualquier texto libre como primer mensaje a un contacto que no inició conversación en las últimas 24 horas.
-</Warning>
-
-## Cómo crear una campaña
+Una campaña permite enviar un mensaje a un conjunto de contactos. Necesitás permiso para gestionar campañas, un canal habilitado y una plantilla disponible para ese envío.
 
 <Steps>
-  <Step title="Ir a Campañas">
-    Desde el menú lateral, seleccioná **Campañas** y luego hacé clic en **Nueva campaña**.
-  </Step>
-
-  <Step title="Configurar los detalles">
-    | Campo | Descripción |
-    |---|---|
-    | **Nombre** | Identificador interno de la campaña |
-    | **Canal** | Canal de WhatsApp API desde donde se envía |
-    | **Plantilla** | Plantilla de Meta previamente aprobada |
-    | **Segmento** | Grupo de contactos que recibirán el mensaje |
-  </Step>
-
-  <Step title="Personalizar el mensaje">
-    Si la plantilla tiene variables (ej: `{{nombre}}`), podés mapear esas variables a campos de tus contactos para personalizar cada mensaje.
-  </Step>
-
-  <Step title="Programar o enviar">
-    - **Enviar ahora**: el envío comienza de inmediato.
-    - **Programar**: elegí fecha y hora para el envío diferido.
-  </Step>
-
-  <Step title="Confirmar">
-    Revisá el resumen: cantidad de contactos, canal y plantilla. Confirmá para iniciar la campaña.
-  </Step>
+  <Step title="Prepará la campaña">Entrá a **Campañas** y comenzá una nueva. Elegí la organización, el canal y la plantilla correspondientes.</Step>
+  <Step title="Revisá los destinatarios">Cargá o seleccioná los contactos mediante las opciones del creador. Revisá teléfonos, duplicados y contactos que no correspondan al envío.</Step>
+  <Step title="Completá las variables">Asigná los datos que necesita la plantilla y comprobá la vista previa. Usá valores reales para cada destinatario.</Step>
+  <Step title="Validá el resumen">Revisá el mensaje, el canal y la cantidad de destinatarios elegibles antes de confirmar.</Step>
+  <Step title="Enviá o programá">Elegí el envío inmediato o definí fecha, hora y zona horaria. Confirmá sólo cuando el resumen sea correcto.</Step>
 </Steps>
 
-## Estado de una campaña
+## Revisar resultados
 
-Después de lanzar una campaña, podés ver el estado en tiempo real:
+Abrí **Ver detalles** para consultar los destinatarios y el estado de los mensajes. Diferenciá enviados, errores, omitidos y respuestas.
 
-| Estado | Significado |
-|---|---|
-| **Programada** | Esperando la fecha/hora de envío |
-| **En progreso** | Enviando mensajes |
-| **Completada** | Todos los mensajes fueron procesados |
-| **Error** | Hubo problemas en el envío — revisá los detalles |
+Una campaña completada indica que se procesó su envío; no significa que todos los contactos respondieron o compraron.
 
-## Próximo paso
+## Programar o cancelar
 
-<Card title="Gestionar seguimientos" icon="clock" href="/campanas/seguimientos">
-  Configurá follow-ups automáticos para los contactos que no respondieron.
-</Card>
+Si la campaña tiene una programación pendiente, usá las acciones disponibles para reprogramarla o cancelarla. Cancelar no retira mensajes que ya fueron enviados.
+
+## Antes del siguiente envío
+
+Revisá errores, respuestas y la [plantilla](/campanas/plantillas-whatsapp) utilizada. No vuelvas a enviar toda la campaña sólo porque algunos destinatarios tuvieron un error.
