@@ -1,0 +1,48 @@
+---
+title: Enviar imágenes, PDFs y archivos
+description: Cargá archivos y definí cuándo debe enviarlos tu agente IA.
+---
+Usá una herramienta de envío para compartir un catálogo, una lista de precios o un documento durante una conversación. Necesitás permiso para editar el agente y sus herramientas.
+
+<Steps>
+  <Step title="Agregá la herramienta">Abrí la configuración del agente, entrá a sus herramientas y elegí **Enviar imágenes y archivos**.</Step>
+  <Step title="Poné un nombre claro">Por ejemplo, `enviar_catalogo`. Usá letras minúsculas, números y guiones bajos, hasta 64 caracteres.</Step>
+  <Step title="Cargá los archivos">Usá **Elegir archivos** o arrastralos al área de carga. Podés agregar hasta tres por herramienta.</Step>
+  <Step title="Guardá la configuración">Esperá a que termine la carga y guardá. Un archivo pendiente de guardar todavía no forma parte de la configuración confirmada.</Step>
+  <Step title="Definí cuándo enviarlos">En las instrucciones principales del agente, indicá cuándo debe llamar a la herramienta usando su nombre exacto.</Step>
+</Steps>
+
+## Ejemplo de instrucción
+
+```text
+Cuando el cliente pida el catálogo de productos, usá enviar_catalogo.
+No la uses ante un saludo ni envíes el catálogo si no lo pidió.
+Después del envío, preguntá qué producto le interesa.
+```
+
+Crear la herramienta no hace que se ejecute ante cada mensaje. Las instrucciones y el contexto determinan cuándo la usa la IA.
+
+## Formatos y límites
+
+| Tipo | Formatos | Tamaño por archivo |
+| --- | --- | --- |
+| Imagen | JPG, JPEG, PNG | Hasta 5 MB |
+| Documento | PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, TXT, CSV, ZIP | Hasta 20 MB |
+
+No se aceptan archivos vacíos ni formatos fuera de esta lista.
+
+## Cómo lo recibe el cliente
+
+En los canales compatibles, el cliente recibe el archivo mediante el envío disponible para ese canal. En Instagram, los documentos se comparten como enlaces temporales de descarga.
+
+En **Pruebas**, el envío se muestra como vista previa: no manda el archivo a un cliente real. Para comprobar la recepción, usá una conversación controlada en el canal conectado.
+
+## Actualizar un archivo
+
+Editá la herramienta, quitá el archivo anterior, elegí el nuevo y guardá. Revisá que las instrucciones sigan usando el nombre correcto de la herramienta.
+
+## Archivo para enviar o base de conocimiento
+
+Un archivo cargado en esta herramienta se usa para compartirlo. Si querés que el agente consulte su contenido para responder preguntas, agregalo también a las [fuentes de conocimiento](/agentes/base-de-conocimiento).
+
+Los archivos quedan almacenados por Nexo y asociados a la configuración de tu organización. No necesitás alojarlos por tu cuenta.

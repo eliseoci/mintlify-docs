@@ -1,77 +1,49 @@
 ---
-title: Configurar el prompt del agente
-description: El prompt define la personalidad, el rol y los límites de tu agente. Cómo escribirlo bien.
+title: Escribir las instrucciones del agente
+description: Definí cómo debe responder, cuándo usar herramientas y cuándo pedir atención humana.
 ---
+Las instrucciones principales, también llamadas **prompt**, definen el comportamiento del agente. Las fuentes aportan los datos de tu negocio.
 
-El prompt es el conjunto de instrucciones que le decís al agente quién es, cómo habla y qué puede o no puede hacer. Es la diferencia entre un agente útil y uno que responde cualquier cosa.
+## Qué incluir
 
-## Estructura recomendada
+| Parte | Qué definir |
+| --- | --- |
+| Rol | Qué negocio representa y a quién ayuda |
+| Objetivo | Qué debe resolver o confirmar durante la conversación |
+| Tono | Cómo querés que hable |
+| Límites | Qué no puede prometer o inventar |
+| Herramientas | Cuándo debe usar cada acción habilitada |
+| Atención humana | En qué casos debe derivar |
 
-Un buen prompt tiene tres partes:
+## Ejemplo
 
-### 1. Rol y contexto
+```text
+Sos el agente de atención de Casa Sur, una tienda de muebles.
+Ayudá al cliente a elegir un producto según sus medidas y necesidades.
 
-Describí quién es el agente y para qué empresa trabaja.
+Respondé en español argentino, con mensajes breves y claros.
+Consultá las fuentes para informar precios y condiciones de entrega.
+Si falta información, decilo; no inventes stock, descuentos ni plazos.
 
-```
-Sos el asistente de ventas de [Empresa], especializado en [producto/servicio].
-Tu trabajo es ayudar a los clientes a entender las opciones disponibles y guiarlos hacia una compra o una demo.
-```
-
-### 2. Tono y estilo
-
-Definí cómo habla el agente.
-
-```
-Respondé siempre en español, de forma amigable y directa.
-Usá un tono profesional pero cercano. Evitá respuestas largas — sé conciso.
-Si no sabés algo, decilo honestamente y ofrecé derivar a un humano.
-```
-
-### 3. Límites y reglas
-
-Definí qué no debe hacer el agente.
-
-```
-No menciones precios sin antes preguntar el país del cliente.
-No hagas promesas de tiempos de entrega que no estén en la base de conocimiento.
-No respondas preguntas que no sean sobre [producto/servicio].
+Cuando el cliente pida el catálogo, usá enviar_catalogo.
+Si necesita resolver un reclamo o pide hablar con una persona,
+derivá a atención humana según la herramienta habilitada.
 ```
 
-## Ejemplo completo
+Usá el nombre exacto de una herramienta que ya esté configurada. Escribir su nombre en el prompt no la crea.
 
-```
-Sos el asistente de ventas de Acme Corp, una empresa de software de gestión de inventarios.
+## Instrucciones para el proceso comercial
 
-Tu objetivo es ayudar a los visitantes a entender si Acme Corp es la solución correcta para su negocio,
-responder dudas sobre funcionalidades y agendar demos con el equipo de ventas.
+Describí qué señales indican un avance: por ejemplo, que el cliente confirmó el producto o aceptó recibir una propuesta. Evitá reglas vagas como “avanzá cuando esté interesado”.
 
-Respondé siempre en español rioplatense, de forma directa y sin rodeos.
-Usá párrafos cortos. Si el usuario pregunta algo fuera de tu área, decile
-"Eso está fuera de lo que puedo ayudarte, pero podés contactar a nuestro equipo en soporte@acme.com".
+El movimiento depende de las funciones disponibles y del contexto de la conversación. Revisá [movimiento manual y por IA](/embudo/movimiento-ia).
 
-No inventes funcionalidades. Si no sabés la respuesta, decilo.
-```
+## Cómo corregir una respuesta
 
-## Errores comunes
+1. Identificá qué respondió y qué esperabas.
+2. Revisá si faltaba un dato en las fuentes o una regla en las instrucciones.
+3. Corregí sólo la parte necesaria.
+4. Guardá y repetí el caso en **Pruebas**.
+5. Probá también una consulta distinta para detectar contradicciones.
 
-<AccordionGroup>
-  <Accordion title="Prompt demasiado corto">
-    Un prompt de dos líneas no da suficiente contexto. El agente llena los vacíos de forma impredecible.
-    **Mínimo recomendado**: 100 palabras con rol, tono y al menos una regla de límite.
-  </Accordion>
-  <Accordion title="No definir qué hacer cuando el agente no sabe algo">
-    Si no instruís al agente sobre cómo manejar preguntas fuera de su área, va a inventar respuestas.
-    Siempre incluí una instrucción del tipo: "Si no sabés, decilo y ofrecé [acción alternativa]".
-  </Accordion>
-  <Accordion title="Instrucciones contradictorias">
-    "Sé breve" + "siempre explica todos los detalles" es una contradicción. El agente va a ignorar una de las dos.
-    Revisá que las instrucciones sean coherentes entre sí.
-  </Accordion>
-</AccordionGroup>
-
-## Próximo paso
-
-<Card title="Probar en el playground" icon="flask-conical" href="/agentes/playground">
-  Antes de publicar, verificá que el agente responde como esperás en el playground.
-</Card>
+No hace falta que el prompt tenga una extensión mínima. Priorizá reglas claras y datos actualizados.

@@ -1,196 +1,60 @@
 ---
-title: Chatwoot para agentes humanos
-description: Guía simple para que tu equipo atienda conversaciones en Chatwoot desde la web o la app móvil.
+title: Usar Chatwoot desde web y celular
+description: Entrá a la bandeja de tu equipo, encontrá tus conversaciones y continuá la atención.
 ---
-
-Esta guía es para las personas que responden conversaciones todos los días. No necesitás configurar APIs, webhooks ni nada técnico. Tu trabajo es entrar a Chatwoot, ver qué conversaciones necesitan atención, responder con claridad y cerrar cuando el cliente ya quedó atendido.
-
-<Info>
-  Usá esta instancia de Chatwoot: [https://chatwoot-production-62ad.up.railway.app](https://chatwoot-production-62ad.up.railway.app)
-</Info>
-
-## Antes de empezar
-
-Pedile a tu responsable estos datos:
-
-- Tu **email** de acceso.
-- Tu **contraseña**.
-- Qué conversaciones tenés que atender: asignadas a vos, sin asignar o de una bandeja específica.
-
-<Warning>
-  No compartas tu contraseña por WhatsApp, email ni mensajes internos. Si no podés entrar, pedí que te restablezcan el acceso.
-</Warning>
+Chatwoot es el lugar donde tu equipo humano atiende los chats y consulta los contactos. Necesitás una cuenta habilitada y acceso a las bandejas de tu organización.
 
 ## Entrar desde la computadora
 
-<Steps>
-  <Step title="Abrí Chatwoot en el navegador">
-    Entrá a [https://chatwoot-production-62ad.up.railway.app](https://chatwoot-production-62ad.up.railway.app).
-  </Step>
+Abrí [Chatwoot de Nexo](https://chatwoot-production-62ad.up.railway.app), ingresá con tu correo y contraseña y elegí la cuenta de tu organización.
 
-  <Step title="Iniciá sesión">
-    Escribí tu **email** y tu **contraseña**. Después hacé clic en **Sign In**.
-  </Step>
-
-  <Step title="Abrí la bandeja de conversaciones">
-    Cuando entres, buscá la sección de conversaciones o inbox. Desde ahí vas a ver los chats que podés atender.
-  </Step>
-</Steps>
-
-<Tip>
-  Si trabajás todos los días desde una computadora, guardá la URL en favoritos. Es el camino más simple y evita confusiones con otras instalaciones de Chatwoot.
-</Tip>
+Si tu organización tiene una dirección propia de Chatwoot, usá la que te indique el administrador.
 
 ## Entrar desde el celular
 
-Podés usar Chatwoot desde iPhone o Android. La app sirve para responder cuando no estás en la computadora, pero tiene un paso extra: primero tenés que cambiar la URL de instalación.
-
-<CardGroup cols={2}>
-  <Card title="Descargar para iPhone" icon="apple" href="https://apps.apple.com/ar/app/chatwoot/id1495796682">
-    Instalá la app oficial de Chatwoot desde App Store.
-  </Card>
-  <Card title="Descargar para Android" icon="smartphone" href="https://play.google.com/store/apps/details?id=com.chatwoot.app&hl=es_AR">
-    Instalá la app oficial de Chatwoot desde Google Play.
-  </Card>
-</CardGroup>
+Instalá la app oficial para [iPhone](https://apps.apple.com/ar/app/chatwoot/id1495796682) o [Android](https://play.google.com/store/apps/details?id=com.chatwoot.app).
 
 <Steps>
-  <Step title="Abrí la app de Chatwoot">
-    Al abrirla por primera vez, la app puede mostrar que estás conectado a `app.chatwoot.com`. Esa no es la instalación correcta para tu equipo.
+
+  <Step title="Cambiá la URL">
+    En la pantalla de ingreso, tocá **Change URL**.
+
+    <img src="/images/chatwoot/mobile-change-url.jpg" alt="Pantalla de ingreso de Chatwoot con Change URL marcado" width="280" />
+
   </Step>
+  <Step title="Ingresá la dirección de tu instalación">
+    Usá `https://chatwoot-production-62ad.up.railway.app/`, o la dirección propia que te indicó tu administrador. Tocá **Conectar**.
 
-  <Step title="Tocá Change URL">
-    Debajo del botón **Sign In**, tocá **Change URL**.
+    <img src="/images/chatwoot/mobile-installation-url.jpg" alt="Campo de URL de instalación en la app de Chatwoot" width="280" />
 
-    <img src="/images/chatwoot/mobile-change-url.jpg" alt="Pantalla de inicio de sesión de Chatwoot con la opción Change URL marcada" width="280" />
   </Step>
-
-  <Step title="Ingresá la URL de instalación">
-    En **URL de instalación**, escribí:
-
-    ```txt
-    https://chatwoot-production-62ad.up.railway.app/
-    ```
-
-    Después tocá **Conectar**.
-
-    <img src="/images/chatwoot/mobile-installation-url.jpg" alt="Pantalla de URL de instalación de Chatwoot con la instancia de AgentOS" width="280" />
-  </Step>
-
-  <Step title="Entrá con tus credenciales">
-    Cuando la app se conecte a la instalación correcta, escribí tu **email** y tu **contraseña**. Después tocá **Sign In**.
+  <Step title="Iniciá sesión">
+    Ingresá con el correo habilitado para tu equipo y elegí la cuenta correcta.
   </Step>
 </Steps>
 
-<Warning>
-  Si la app sigue diciendo que estás conectado a `app.chatwoot.com`, no sigas. Tocá **Change URL** y cargá la URL de instalación de nuevo. Si entrás en la instalación equivocada, no vas a ver las conversaciones de tu equipo.
-</Warning>
+## Elegir la vista correcta
 
-## Ver tus mensajes y todos los mensajes
+| Vista | Qué muestra |
+| --- | --- |
+| **Mine / Mías** | Conversaciones asignadas a vos |
+| **All / Todas** | Conversaciones de las bandejas a las que tenés acceso |
+| **Unassigned / Sin asignar** | Conversaciones que todavía no tienen un agente asignado |
 
-Chatwoot separa las conversaciones por vistas. Para un agente, lo normal es trabajar desde **Mine** o **Mías**, porque ahí aparecen las conversaciones asignadas a esa persona. Para un administrador o supervisor, también es importante revisar **All** o **Todas**, porque ahí se ve la operación completa del equipo.
+Para supervisar, revisá primero las conversaciones sin asignar. Para atender tu propia cola, usá **Mías**.
 
-<Info>
-  Usá **All** o **Todas** para supervisar. Usá **Mine** o **Mías** para responder tu propia cola. No tomes una conversación de otra persona sin coordinarlo, salvo que seas responsable de la operación.
-</Info>
+## Atender una conversación
 
-<Tabs>
-  <Tab title="Escritorio">
-    <Steps>
-      <Step title="Entrá a Chatwoot desde el navegador">
-        Abrí [https://chatwoot-production-62ad.up.railway.app](https://chatwoot-production-62ad.up.railway.app) e iniciá sesión.
-      </Step>
+1. Abrí el chat y revisá su responsable.
+2. Leé el contexto y las respuestas previas de la IA.
+3. Respondé o coordiná quién debe tomar el caso.
+4. Cuando no quede atención pendiente, marcá el chat como resuelto.
+5. Registrá en Nexo el avance comercial o una tarea si hace falta.
 
-      <Step title="Abrí la vista de conversaciones">
-        En la barra lateral, entrá a la sección de conversaciones o inbox. Ahí vas a ver las vistas principales de trabajo.
-      </Step>
+## Si no ves tus conversaciones
 
-      <Step title="Usá Mine o Mías para ver lo asignado a vos">
-        Seleccioná **Mine** o **Mías** para revisar las conversaciones que están asignadas a tu usuario. Esta es la vista recomendada para agentes que responden clientes.
-      </Step>
+Comprobá la URL de instalación, la cuenta, las bandejas y la vista elegida. Entrar a otra instalación de Chatwoot no muestra la operación de tu organización.
 
-      <Step title="Usá All o Todas para revisar todo el equipo">
-        Seleccioná **All** o **Todas** para ver todas las conversaciones de las bandejas a las que tenés acceso. Esta vista sirve para administradores que necesitan revisar carga de trabajo, conversaciones sin seguimiento o calidad de atención.
-      </Step>
+Si ya existías en Chatwoot con el mismo correo, tu usuario conserva su acceso. Los cambios de permisos en Nexo no reemplazan los de Chatwoot.
 
-      <Step title="Filtrá si necesitás encontrar algo puntual">
-        Si hay muchas conversaciones, usá los filtros por **estado**, **agente asignado**, **inbox**, **equipo**, **etiqueta** o **fecha**. Por ejemplo: conversaciones abiertas, conversaciones sin asignar o conversaciones de WhatsApp.
-      </Step>
-    </Steps>
-  </Tab>
-
-  <Tab title="App móvil">
-    <Steps>
-      <Step title="Abrí la app ya conectada a la instalación correcta">
-        Verificá que la app esté conectada a `https://chatwoot-production-62ad.up.railway.app/`. Si no lo está, volvé a **Change URL** y cargá la URL correcta.
-      </Step>
-
-      <Step title="Entrá a conversaciones">
-        Desde la pantalla principal de la app, abrí la sección de conversaciones o inbox.
-      </Step>
-
-      <Step title="Revisá Mine o Mías para tu cola">
-        Tocá **Mine** o **Mías** para ver las conversaciones asignadas a vos. Esta vista es la que deberías usar para responder durante tu turno.
-      </Step>
-
-      <Step title="Revisá All o Todas para supervisar">
-        Si sos administrador, tocá **All** o **Todas** para revisar conversaciones de todo el equipo desde el celular. Usala para detectar mensajes sin respuesta, conversaciones mal asignadas o casos que necesitan ayuda.
-      </Step>
-
-      <Step title="Usá Unassigned o Sin asignar si necesitás controlar pendientes">
-        Revisá **Unassigned** o **Sin asignar** para encontrar conversaciones que todavía no tomó ningún agente. Esta vista es útil para administradores al inicio del día o cuando hay mucha demanda.
-      </Step>
-    </Steps>
-  </Tab>
-</Tabs>
-
-<Tip>
-  Para una revisión rápida de administrador, el orden recomendado es: **Unassigned/Sin asignar** para detectar conversaciones sin dueño, **All/Todas** para revisar el estado general y **Mine/Mías** para confirmar tu propia cola.
-</Tip>
-
-## Cómo trabajar una conversación
-
-<Steps>
-  <Step title="Elegí una conversación">
-    Abrí una conversación asignada a vos o una conversación que tu responsable te indicó atender. Si no sabés cuál tomar, preguntá antes de responder.
-  </Step>
-
-  <Step title="Leé el contexto completo">
-    Antes de escribir, revisá los últimos mensajes del cliente. Si hay historial, leelo. Responder sin contexto genera errores, repreguntas innecesarias y mala atención.
-  </Step>
-
-  <Step title="Respondé de forma clara">
-    Escribí una respuesta corta, concreta y útil. Si necesitás confirmar un dato, hacé una pregunta simple. No inventes información.
-  </Step>
-
-  <Step title="Pedí ayuda cuando haga falta">
-    Si el caso requiere autorización, precio especial, reclamo sensible o información que no tenés, pedí ayuda a tu responsable antes de prometer algo al cliente.
-  </Step>
-
-  <Step title="Cerrá cuando esté resuelto">
-    Cuando el cliente ya recibió respuesta y no queda ninguna acción pendiente, marcá la conversación como resuelta según el flujo que use tu equipo.
-  </Step>
-</Steps>
-
-## Buenas prácticas para agentes humanos
-
-- Respondé como una persona: claro, amable y sin sonar robótico.
-- No prometas descuentos, tiempos de entrega ni soluciones si no están confirmadas.
-- No borres ni ocultes información importante del caso.
-- Si el cliente está molesto, priorizá entender el problema antes de defender la respuesta anterior.
-- Si una conversación fue atendida por IA antes de llegar a vos, revisá qué dijo la IA antes de continuar.
-- Si no entendés qué hacer, preguntá. Mejor frenar 2 minutos que responder mal.
-
-## Problemas frecuentes
-
-| Problema | Qué hacer |
-|---|---|
-| No puedo entrar desde la web | Revisá que estés usando `https://chatwoot-production-62ad.up.railway.app`. Si la URL está bien, pedí que revisen tus credenciales. |
-| La app móvil no muestra mis conversaciones | Verificá que hayas tocado **Change URL** y usado `https://chatwoot-production-62ad.up.railway.app/`. Después revisá si estás en **Mine/Mías** o **All/Todas**. |
-| Me olvidé la contraseña | Pedí a tu responsable que te restablezca el acceso. |
-| No sé qué conversación responder | No adivines. Consultá si tenés que trabajar desde **Mine/Mías**, **Unassigned/Sin asignar** o **All/Todas**. |
-| No sé qué contestar | Revisá el contexto y pedí ayuda antes de prometer algo al cliente. |
-
-<Info>
-  La idea es simple: Chatwoot es el lugar donde el equipo humano atiende al cliente. AgentOS puede ayudar con automatización, pero cuando una persona toma la conversación, la prioridad es responder bien, con contexto y sin inventar.
-</Info>
+Consultá [conversaciones y atención humana](/contactos/conversaciones) para entender cómo se relaciona el chat con las oportunidades y las tareas.
